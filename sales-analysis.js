@@ -97,6 +97,7 @@ function topSellingProductByQuantity(orders, products) {
     for (let key in productSold) {
         if (productSold[key] > maxQuantSold) {
             productIDSoldMost = key;
+            maxQuantSold = productSold[key];
         }
     }
 
