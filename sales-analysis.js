@@ -60,30 +60,6 @@ const orders = [
     }
 ];
 
-function summary(orders, products) {
-    let summaryObject = {
-        purchasedProductCount: {}
-    }
-    // loop through the orders to create an array of unique productIDs 
-    // [1, 5]
-    orders.forEach(function (order) {
-        summaryObject.purchasedProductCount[productID] = (summaryObject.purchasedProductCount[order.productId] || 0) + 1
-    })
-
-    summaryObject.purchasedProductIDs = Object.keys(purchasedProductCount);
-
-    // create an array of name of product purchased, using an array of productIDs
-    summaryObject.purchasedProductNames = products.reduce(function (nameArr, product) {
-        if (purchasedProductIDs.includes(product.id)) {
-            return nameArr.concat(([product.name]));
-        } else {
-            return nameArr;
-        }
-    }, []);
-
-    return summaryObject;
-}
-
 function productsPurchased(orders, products) {
     // loop through the orders to create an array of unique productIDs 
     // [1, 5]
